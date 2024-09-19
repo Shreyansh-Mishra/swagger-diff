@@ -55,7 +55,7 @@ public class HtmlRender implements Render {
             body().with(
                 header().with(h1(title)),
                 div().withClass("article").with(
-                    div_headArticle("Versions", "versions", p_versions),
+                    div_headArticle("Changelog", "versions", p_versions),
                     div_headArticle("What's New", "new", ol_new),
                     div_headArticle("What's Deprecated", "deprecated", ol_miss),
                     div_headArticle("What's Changed", "changed", ol_changed)
@@ -72,7 +72,7 @@ public class HtmlRender implements Render {
 
     private ContainerTag p_versions(String oldVersion, String newVersion) {
         ContainerTag p = p().withId("versions");
-        p.withText("Changes from " + oldVersion + " to " + newVersion + ".");
+        p.withText(" ");
         return p;
     }
 
